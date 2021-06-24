@@ -1,0 +1,41 @@
+@import './base/fonts';
+@import './base/settings';
+@import './base/base';
+@import './pages/hero';
+@import './pages/about';
+@import './components/sidebar';
+@import './components/skills';
+@import './components/skill';
+
+.app_hero,
+.app__section {
+  height: 100vh;
+  display: flex;
+  background-color: $light;
+}
+
+.app_hero {
+  justify-content: center;
+  align-items: center;
+}
+
+.app__section {
+  // padding-bottom: 18rem;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  max-width: 80%;
+}
+
+#about {
+  background-color: $primary;
+}
+#gallery {
+  background-color: #ffa855;
+}
+#contact {
+  background-color: #00ffa7;
+}

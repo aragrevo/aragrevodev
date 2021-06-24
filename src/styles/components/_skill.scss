@@ -1,0 +1,23 @@
+.skill__item {
+  padding: 70px 45px;
+  //   border-bottom: 0px solid #e6ecf8;
+  border-right: 1px solid #e6ecf8;
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: 12px;
+
+  &-image {
+    margin: 0 auto 2em;
+    text-align: center;
+    display: block;
+    position: relative;
+
+    img {
+      height: 6rem;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}

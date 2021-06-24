@@ -1,0 +1,67 @@
+.hero__content {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: $dark;
+
+  .hero__title {
+    align-items: center;
+    display: flex;
+    font-size: 4.5rem;
+    font-weight: 700;
+    height: 100px;
+    justify-content: center;
+    line-height: 1.125;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .hero__subtitle {
+    font-family: 'Gilroy-ExtraBold', 'Bebas Neue', cursive;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__avatar {
+    width: 220px;
+    margin: 2rem 0;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.hero__title-slider {
+  color: $primary;
+  margin-left: 14px;
+  box-sizing: border-box;
+  animation: slider 6s linear infinite;
+}
+
+@keyframes slider {
+  0% {
+    margin-top: -320px;
+  }
+  5% {
+    margin-top: -160px;
+  }
+  30% {
+    margin-top: -160px;
+  }
+  35% {
+    margin-top: 0px;
+  }
+  65% {
+    margin-top: 0px;
+  }
+  70% {
+    margin-top: 160px;
+  }
+  100% {
+    margin-top: 160px;
+  }
+}
