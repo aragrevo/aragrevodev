@@ -12,14 +12,14 @@ const App = () => {
       <Hero />
 
       <About />
-      <Skills />
+      {/* <Skills /> */}
 
-      <section id='gallery' className='app__section'>
+      {/* <section id='gallery' className='app__section'>
         <h2>gallery</h2>
       </section>
       <section id='contact' className='app__section'>
         <h2>contact</h2>
-      </section>
+      </section> */}
       <Sidebar />
     </main>
   );

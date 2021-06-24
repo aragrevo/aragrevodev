@@ -13,9 +13,9 @@ export const Sidebar = () => {
       title: 'About',
     },
     {
-      path: '#gallery',
+      path: '#portfolio',
       icon: 'image',
-      title: 'Gallery',
+      title: 'Portfolio',
     },
     {
       path: '#contact',

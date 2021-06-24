@@ -9,7 +9,7 @@
 
 .app_hero,
 .app__section {
-  height: 100vh;
+  height: 99vh;
   display: flex;
   background-color: $light;
 }
@@ -28,6 +28,7 @@
   margin: 0 auto;
   position: relative;
   max-width: 80%;
+  display: flex;
 }
 
 #about {
