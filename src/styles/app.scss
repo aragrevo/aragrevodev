@@ -7,20 +7,31 @@
 @import './components/skills';
 @import './components/skill';
 
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app_container {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+  max-width: 414px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba($color: $light, $alpha: 0.5), 0px -0px 10px rgba($color: $light, $alpha: 0.5);
+  position: relative;
+}
+
 .app_hero,
 .app__section {
-  height: 99vh;
+  height: 100%;
   display: flex;
-  background-color: $light;
-}
-
-.app_hero {
   justify-content: center;
-  align-items: center;
-}
-
-.app__section {
-  // padding-bottom: 18rem;
+  align-content: space-between;
 }
 
 .container {
@@ -31,12 +42,11 @@
   display: flex;
 }
 
-#about {
-  background-color: $primary;
-}
-#gallery {
-  background-color: #ffa855;
-}
-#contact {
-  background-color: #00ffa7;
+@media only screen and (max-width: 413px) {
+  .app_container,
+  .app_hero,
+  .app__section {
+    height: 100vh;
+    border-radius: 0px;
+  }
 }
