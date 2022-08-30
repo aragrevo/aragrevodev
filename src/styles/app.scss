@@ -3,6 +3,7 @@
 @import './base/base';
 @import './pages/hero';
 @import './pages/about';
+@import './pages/building';
 @import './components/sidebar';
 @import './components/skills';
 @import './components/skill';
@@ -32,6 +33,7 @@ main {
   display: flex;
   justify-content: center;
   align-content: space-between;
+  min-width: 330px;
 }
 
 .container {

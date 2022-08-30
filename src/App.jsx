@@ -5,6 +5,7 @@ import {About} from './pages/About';
 
 import './styles/app.scss';
 import {Skills} from './components/Skills';
+import {Building} from './pages/Building';
 
 const App = () => {
   const [page, setPage] = useState(() => {
@@ -27,10 +28,10 @@ const App = () => {
     switch (page) {
       case 'about':
         return <About />;
-      case 'skills':
-        return <Skills />;
-      default:
+      case '':
         return <Hero />;
+      default:
+        return <Building />;
     }
   };
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import Person from '../components/Person';
+import {languages} from '../data/skills';
 
 export const Hero = () => {
   return (
@@ -9,9 +10,16 @@ export const Hero = () => {
           <h1>Hi, I’m Eduardo Vergara.</h1>
           <h2>Front-end Developer</h2>
           <div className='hero__title-slider'>
-            <div>Angular</div>
-            <div>React</div>
-            <div>Ionic</div>
+            <div className='slider'>
+              <span className='text'>
+                {languages.map(l => (
+                  <span>
+                    {l}
+                    <br />
+                  </span>
+                ))}
+              </span>
+            </div>
           </div>
         </div>
         <h2 className='hero__subtitle'>I code beautifully simple things, and I love what I do.</h2>

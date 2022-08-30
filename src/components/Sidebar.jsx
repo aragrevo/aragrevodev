@@ -2,7 +2,7 @@ import React from 'react';
 
 const menu = [
   {
-    path: 'home',
+    path: '',
     icon: 'person',
     title: 'Home',
   },
@@ -23,7 +23,6 @@ const menu = [
   },
 ];
 const MySidebar = ({toPage, page}) => {
-  console.log('Sidebar', page);
   return (
     <nav>
       <ul className='sidebar'>

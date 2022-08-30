@@ -55,42 +55,47 @@
 }
 
 .hero__title-slider {
-  color: $primary;
   box-sizing: border-box;
   margin-left: 0px;
-  animation: slideUp500 6s linear infinite;
-  height: 35px;
-}
-
-@keyframes slider {
-  0% {
-    margin-top: -320px;
-  }
-  5% {
-    margin-top: -160px;
-  }
-  30% {
-    margin-top: -160px;
-  }
-  35% {
-    margin-top: 0px;
-  }
-  65% {
-    margin-top: 0px;
-  }
-  70% {
-    margin-top: 160px;
-  }
-  100% {
-    margin-top: 160px;
+  // height: 35px;
+  // overflow: hidden;
+  // line-height: 35px;
+  .slider {
+    color: $primary;
+    letter-spacing: 5px;
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+    .text {
+      animation: slide 8s infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
   }
 }
 
-@keyframes slideUp500 {
-  0% {
-    transform: translate3d(0, 75, 0);
-  }
+@keyframes text-fill {
   100% {
-    transform: translate3d(0, -75px, 0);
+    width: 100%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
   }
 }

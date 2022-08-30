@@ -1,0 +1,31 @@
+.building {
+  &__content {
+    // max-width: 80%;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+svg#freepik_stories-bricklayer:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-bricklayer.animated #freepik--Character--inject-47 {
+  animation: 2s Infinite linear wind;
+  animation-delay: 0s;
+}
+@keyframes wind {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
