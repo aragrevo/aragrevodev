@@ -1,11 +1,11 @@
 import React, {useCallback, useState} from 'react';
+import {About} from './pages/About';
+import {Building} from './pages/Building';
+import {Contact} from './pages/Contact';
 import {Hero} from './pages/Hero';
 import {Sidebar} from './components/Sidebar';
-import {About} from './pages/About';
 
 import './styles/app.scss';
-import {Skills} from './components/Skills';
-import {Building} from './pages/Building';
 
 const App = () => {
   const [page, setPage] = useState(() => {
@@ -30,6 +30,8 @@ const App = () => {
         return <About />;
       case '':
         return <Hero />;
+      case 'contact':
+        return <Contact />;
       default:
         return <Building />;
     }

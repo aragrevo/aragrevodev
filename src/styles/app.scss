@@ -4,6 +4,7 @@
 @import './pages/hero';
 @import './pages/about';
 @import './pages/building';
+@import './pages/contact';
 @import './components/sidebar';
 @import './components/skills';
 @import './components/skill';
@@ -25,6 +26,7 @@ main {
   border-radius: 40px;
   box-shadow: 0px 0px 10px rgba($color: $light, $alpha: 0.5), 0px -0px 10px rgba($color: $light, $alpha: 0.5);
   position: relative;
+  overflow: hidden;
 }
 
 .app_hero,

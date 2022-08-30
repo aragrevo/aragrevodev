@@ -69,12 +69,16 @@
     overflow: hidden;
     width: 10em;
     .text {
-      animation: slide 8s infinite;
+      animation: slide 12s ease-in-out infinite;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       text-align: center;
+      img {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
     }
   }
 }
@@ -97,5 +101,8 @@
   }
   75% {
     top: -3.6em;
+  }
+  100% {
+    top: 0;
   }
 }

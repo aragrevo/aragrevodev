@@ -13,8 +13,9 @@ export const Hero = () => {
             <div className='slider'>
               <span className='text'>
                 {languages.map(l => (
-                  <span>
-                    {l}
+                  <span key={l.name}>
+                    <img src={l.icon} alt='' srcset='' />
+                    {l.name}
                     <br />
                   </span>
                 ))}
