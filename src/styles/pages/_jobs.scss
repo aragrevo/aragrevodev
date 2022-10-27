@@ -1,0 +1,83 @@
+.jobs {
+  &-header {
+    padding: 2.4rem 1.2rem 0;
+    &__title {
+      color: $dark;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.33333;
+    }
+    &__subtitle {
+      color: $secondary;
+      font-size: 1.4rem;
+      line-height: 1.42857;
+    }
+  }
+
+  &-content {
+    padding: 1.6rem 1.2rem 0;
+    li.job:not(:last-child) {
+      border-bottom: 1px solid $color-border-faint;
+    }
+  }
+}
+
+.job {
+  &-card {
+    padding: 1.6rem 0 0.8rem;
+
+    &-content {
+      display: flex;
+
+      &__image {
+        object-fit: scale-down;
+      }
+
+      &__section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding-left: 1.2rem;
+
+        &-title {
+          color: $primary;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 1.5;
+        }
+        &-subtitle,
+        &-caption {
+          color: $secondary;
+          font-size: 1.4rem;
+          line-height: 1.42875;
+        }
+
+        &-subtitle {
+          color: $color-text-active;
+          text-decoration: none;
+          &:hover {
+            color: $primary;
+            text-decoration: underline;
+          }
+        }
+
+        &-time {
+          color: $tertiary;
+          font-size: 1.2rem;
+          font-weight: 600;
+          line-height: 1.3333;
+          margin-top: 0.8rem;
+        }
+
+        &-technologies {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 0.8rem;
+          li:not(:last-child) {
+            margin-right: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

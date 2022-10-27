@@ -1,0 +1,80 @@
+const INFOTRACK = {
+  name: 'Infotrack SA',
+  link: 'https://www.linkedin.com/company/infotrack-colombia/',
+  image:
+    'https://media-exp1.licdn.com/dms/image/C560BAQEwCyagveNlFA/company-logo_100_100/0/1591131328333?e=1674691200&v=beta&t=WS6hs3RixTwoAbXNJC0EtG_qsOvzRxRPFjitLwvMp5k',
+};
+
+const ZOFTINIUM = {
+  name: 'Zoftinium SAS',
+  link: 'https://zoftinium.com/',
+  image:
+    'data:image/jpeg;base64,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',
+};
+
+export const jobs = [
+  {
+    title: 'Desarrollador FrontEnd',
+    company: ZOFTINIUM,
+    location: 'Bogotá, Colombia',
+    isRemote: true,
+    date: 'Feb/2022 - Actualmente',
+    isSoftware: true,
+    technologies: ['Angular', 'Ionic', 'Flutter', 'Bootstrap', 'Postman'],
+  },
+  {
+    title: 'Solution Consultant II',
+    company: {
+      name: 'Sophos Solutions',
+      link: 'https://www.linkedin.com/company/sophossolutions/',
+      image:
+        'https://media-exp1.licdn.com/dms/image/C560BAQHT3nIotwrllQ/company-logo_100_100/0/1654112387462?e=1674691200&v=beta&t=fKrVIAHrXtnCRabcyRIdWHgvKnT5zgbKW9dCc5ov-_k',
+    },
+    location: 'Bogotá, Colombia',
+    isRemote: true,
+    date: 'Ago/2021 - Feb/2022',
+    isSoftware: true,
+    technologies: ['React', 'NextJS', 'MUI', 'Jest'],
+  },
+  {
+    title: 'Desarrollador y Analista Jr',
+    company: ZOFTINIUM,
+    location: 'Bogotá, Colombia',
+    isRemote: true,
+    date: 'May/2019 - Jul/2021',
+    isSoftware: true,
+    technologies: ['Angular', 'Ionic', 'JQuery', 'Bootstrap', 'Cypress', 'SoapUI'],
+  },
+  {
+    title: 'Coordinador implementación y demanda',
+    company: INFOTRACK,
+    location: 'Bogotá, Colombia',
+    isRemote: false,
+    date: 'Oct/2017 - Mar/2019',
+    isSoftware: false,
+  },
+  {
+    title: 'Coordinador Convenio de Soporte',
+    company: INFOTRACK,
+    location: 'Bogotá, Colombia',
+    isRemote: false,
+    date: 'Ene/2016 - Oct/2017',
+    isSoftware: false,
+  },
+  {
+    title: 'Técnico Coordinador de Soporte',
+    company: INFOTRACK,
+    location: 'Bogotá, Colombia',
+    isRemote: false,
+    date: 'Oct/2014 - Ene/2016',
+    isSoftware: false,
+  },
+  {
+    title: 'Técnico Coordinador de Soporte',
+    company: INFOTRACK,
+    location: 'Bogotá, Colombia',
+    isRemote: false,
+    date: 'Feb/2010 - Oct/2014',
+    isSoftware: false,
+  },
+];

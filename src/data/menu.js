@@ -1,32 +1,32 @@
 export const menu = [
   {
-    path: '/',
+    path: '/feed',
     icon: 'home',
     title: 'Home',
   },
   {
-    path: '/group',
+    path: '/mynetwork',
     icon: 'network',
-    title: 'Mi red',
+    title: 'My Network',
   },
   {
-    path: '/portfolio',
+    path: '/jobs',
     icon: 'work',
-    title: 'Empleos',
+    title: 'Jobs',
   },
   {
-    path: 'portfolio2',
+    path: '/messaging',
     icon: 'message',
-    title: 'Mensajes',
+    title: 'Messages',
   },
   {
-    path: '/notification',
+    path: '/notifications',
     icon: 'notification',
-    title: 'Notificaciones',
+    title: 'Notifications',
   },
   {
     path: '/about',
     icon: 'image',
-    title: 'Yo',
+    title: 'Me',
   },
 ];

@@ -40,6 +40,7 @@ export const Navbar = () => {
           </svg>
         </div>
         <div className={classes['global-nav__search']}>
+          <span className='material-symbols-rounded'>search</span>
           <input type='text' placeholder='Buscar' />
         </div>
         <nav className={classes['global-nav__nav']}>
