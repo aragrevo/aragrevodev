@@ -1,10 +1,11 @@
 import React from 'react';
 import Person from '../components/Person';
+import {Card} from '../components/ui';
 import {languages} from '../data/skills';
 
 export const Hero = () => {
   return (
-    <section id='home' className='app_hero'>
+    <Card>
       <div className='hero__content'>
         <div className='hero__title'>
           <h1>Hi, I’m Eduardo Vergara.</h1>
@@ -14,7 +15,7 @@ export const Hero = () => {
               <span className='text'>
                 {languages.map(l => (
                   <span key={l.name}>
-                    <img src={l.icon} alt='' srcset='' />
+                    <img src={l.icon} />
                     {l.name}
                     <br />
                   </span>
@@ -26,6 +27,6 @@ export const Hero = () => {
         <h2 className='hero__subtitle'>I code beautifully simple things, and I love what I do.</h2>
         <Person className='hero__avatar' />
       </div>
-    </section>
+    </Card>
   );
 };

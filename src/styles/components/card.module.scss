@@ -1,0 +1,9 @@
+@import '../base/settings';
+
+.card {
+  background-color: $light;
+  border-radius: $corner-radius-medium;
+  box-shadow: $elevation-lined;
+  border: none;
+  min-height: 100px;
+}

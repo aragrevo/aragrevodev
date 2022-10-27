@@ -1,6 +1,18 @@
 //  Colors
 $dark: #241332;
 $light: #fff;
-$primary: #7510f7;
+$primary: #0a66c2;
 $secondary: #ff0363;
 $tertiary: #00e470;
+$background: #f3f2ef;
+
+$color-border-faint: rgba(0, 0, 0, 0.08);
+$color-icon-nav: rgba(0, 0, 0, 0.6);
+
+$voyager-color-background-input-search: #eef3f8;
+$color-text-active: rgba(0, 0, 0, 0.9);
+
+// Borders
+$corner-radius-small: 0.4rem;
+$corner-radius-medium: 0.8rem;
+$elevation-lined: 0px 0px 0px 1px $color-border-faint;
