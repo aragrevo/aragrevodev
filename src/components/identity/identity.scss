@@ -1,0 +1,24 @@
+@import '../../styles/base/settings';
+.feed-identity {
+  padding: 1.2rem 1.2rem 1.6rem;
+  &__bg {
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 56.25px;
+    margin: -1.2rem -1.2rem 0;
+    background-image: url(https://static-exp1.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq);
+  }
+
+  &__content {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__photo {
+    border: 2px solid $light;
+    background-color: $light;
+    margin: -28px auto 1.2rem;
+    border-radius: 50%;
+  }
+}

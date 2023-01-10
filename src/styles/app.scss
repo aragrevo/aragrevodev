@@ -12,7 +12,7 @@ main {
   column-gap: 2.4rem;
   display: grid;
   grid-template-areas: 'sidebar main aside';
-  grid-template-columns: minmax(300px, 7fr) minmax(0, 12fr) minmax(0, 5fr);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
   grid-template-rows: auto;
   margin: 0 auto;
   padding-top: 78px;
@@ -22,6 +22,12 @@ main {
 
 .sidebar {
   grid-area: 'sidebar';
+}
+.main {
+  grid-area: 'main';
+}
+.aside {
+  grid-area: 'aside';
 }
 
 @media screen and (max-width: 1176px) {
