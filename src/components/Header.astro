@@ -1,0 +1,38 @@
+---
+import ButtonCTA from './ButtonCTA.astro';
+
+const menu = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Portfolio',
+    href: '/',
+  },
+  {
+    name: 'About Me',
+    href: '/',
+  },
+];
+---
+
+<header class=''>
+  <nav class='flex justify-between items-center bg-transparent border-gray-200 rounded py-2.5'>
+    <ul class='sm:flex gap-8 hidden'>
+      {
+        menu.map(({name, href}) => (
+          <li>
+            <a
+              href={href}
+              rel={Astro.url.pathname !== href && 'preload'}
+              class='block py-2 pl-3 transition pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 '>
+              {name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <ButtonCTA />
+  </nav>
+</header>
