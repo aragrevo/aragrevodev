@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "use": "nvm 18.12.1"
   },
   "dependencies": {
     "@astrojs/tailwind": "2.1.3",
