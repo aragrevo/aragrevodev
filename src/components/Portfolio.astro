@@ -1,0 +1,59 @@
+---
+import Box from './Box.astro';
+import Container from './Container.astro';
+
+const projects = [
+  {
+    name: 'Pokedex App',
+    description: "Crud for pokemon's desing to practice",
+    stack: ['Next', 'Nest', 'Mongodb'],
+    label: 'FullStack',
+    url: 'https://pokedex-next-khaki.vercel.app/',
+    image: '/images/pokedex.webp',
+  },
+];
+---
+
+<section id='portfolio' class='min-h-screen bg-neutral-900 py-10 sm:py-20'>
+  <Container>
+    <h2 class='text-5xl text-white block leading-none mb-10'>Projects</h2>
+    <div class='grid grid-cols-12 gap-4'>
+      {
+        projects.map(({name, image, url, stack, label, description}) => (
+          <article class='col-span-4 flex flex-col items-center border rounded-lg shadow-md border-gray-700 bg-gray-800 group transition hover:scale-105'>
+            <a href={url} class='  '>
+              <img
+                class='w-full rounded-t-lg aspect-video opacity-80 transition group-hover:opacity-100 '
+                src={image}
+                alt={`Captura del sitio ${name}`}
+                width='367'
+                height='240'
+                decoding='async'
+                fetchpriority='high'
+              />
+            </a>
+            <div class='flex flex-col justify-between p-4 leading-normal'>
+              <h5 class='text-2xl text-white'>{name}</h5>
+              <p class='font-normal text-gray-400'>{description}</p>
+              <div class='flex flex-wrap gap-3 mt-3'>
+                {stack.map(l => (
+                  <Box>
+                    <img
+                      class='aspect-square w-7'
+                      src={`/icons/${l}.svg`}
+                      width='24'
+                      height='24'
+                      decoding='async'
+                      alt={`Logo of ${l}`}
+                    />
+                    <span class='text-sm'>{l}</span>
+                  </Box>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </Container>
+</section>

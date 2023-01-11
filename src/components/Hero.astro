@@ -1,7 +1,8 @@
 ---
-import ButtonCTA from '@components/ButtonCTA.astro';
 import Blob from './Blob.astro';
 import Box from './Box.astro';
+import ButtonCTA from '@components/ButtonCTA.astro';
+import Container from './Container.astro';
 const technologies = [
   {name: 'angular', bg: 'bg-orange-400'},
   {name: 'react', bg: 'bg-yellow-700', color: 'text-white'},
@@ -11,58 +12,62 @@ const technologies = [
 const timeExperience = new Date().getFullYear() - 2019;
 ---
 
-<section class='grid grid-cols-3 md:max-lg:grid-cols-4 my-10 sm:my-20 gap-4'>
-  <article class='col-span-3 md:col-span-2 lg:col-span-1 flex flex-col justify-between'>
-    <div class='flex flex-col gap-1 sm:gap-2'>
-      <h1 class='text-6xl block leading-none'>My name</h1>
-      <h1 class='text-6xl leading-none'>is <strong class='font-semibold'>Eduardo</strong></h1>
-      <p class='text-lg text-gray-700 leading-tight'>I code beautifully simple things, and I love what I do.</p>
-      <div>
-        <ButtonCTA className='text-white bg-custom-orange hover:bg-orange-600' />
-      </div>
-    </div>
-    <div class='flex flex-wrap gap-3 mt-10'>
-      {
-        technologies.map(({name, color, bg}) => (
-          <Box color={color} bg={bg}>
-            <img
-              class='aspect-square w-7'
-              src={`/icons/${name}.svg`}
-              width='32'
-              height='32'
-              decoding='async'
-              alt={`Logo of ${name}`}
-            />
-            <span>{name}</span>
-          </Box>
-        ))
-      }
-    </div>
-  </article>
-  <div class='col-span-3 md:col-span-2 relative order-first md:order-last'>
-    <div class='absolute blob -z-10 left-0 top-0 right-0 lg:left-28 lg:right-28 h-full'>
-      <Blob />
-    </div>
-    <div class='flex justify-center items-center'>
-      <div class='absolute left-0 lg:left-[15%] z-10'>
-        <Box bg='bg-neutral-900' color='text-white'>
-          <div class='flex flex-col gap-0'>
-            <h3 class='text-3xl m-0 leading-none'>{timeExperience}+</h3>
-            <span class='text-gray-300 text-sm lowercase'>years experience</span>
+<section id='home' class='my-10 sm:my-20'>
+  <Container>
+    <div class='grid grid-cols-3 md:max-lg:grid-cols-4 gap-4'>
+      <article class='col-span-3 md:col-span-2 lg:col-span-1 flex flex-col justify-between'>
+        <div class='flex flex-col gap-1 sm:gap-2 md:gap-3'>
+          <h2 class='text-6xl block leading-none'>My name</h2>
+          <h1 class='text-6xl leading-none'>is <strong class='font-semibold leading-none'>Eduardo</strong></h1>
+          <p class='text-lg text-gray-700 leading-tight'>I code beautifully simple things, and I love what I do.</p>
+          <div>
+            <ButtonCTA className='text-white bg-custom-orange hover:bg-orange-600' />
           </div>
-        </Box>
-      </div>
-      <img
-        class='aspect-[7/9] max-h-96 w-auto clip-svg'
-        src='/images/foto.webp'
-        alt='Foto de Eduardo'
-        width='3626'
-        height='4662'
-        decoding='async'
-        fetchpriority='high'
-      />
+        </div>
+        <div class='flex flex-wrap gap-3 mt-10'>
+          {
+            technologies.map(({name, color, bg}) => (
+              <Box color={color} bg={bg}>
+                <img
+                  class='aspect-square w-7'
+                  src={`/icons/${name}.svg`}
+                  width='32'
+                  height='32'
+                  decoding='async'
+                  alt={`Logo of ${name}`}
+                />
+                <span>{name}</span>
+              </Box>
+            ))
+          }
+        </div>
+      </article>
+      <article class='col-span-3 md:col-span-2 relative order-first md:order-last'>
+        <div class='absolute blob -z-10 left-0 top-0 right-0 lg:left-28 lg:right-28 h-full'>
+          <Blob />
+        </div>
+        <div class='flex justify-center items-center'>
+          <div class='absolute left-0 lg:left-[15%] z-10'>
+            <Box bg='bg-neutral-900' color='text-white'>
+              <div class='flex flex-col gap-0'>
+                <h3 class='text-3xl m-0 leading-none'>{timeExperience}+</h3>
+                <span class='text-gray-300 text-sm lowercase'>years experience</span>
+              </div>
+            </Box>
+          </div>
+          <img
+            class='aspect-[7/9] max-h-96 w-auto clip-svg'
+            src='/images/foto.webp'
+            alt='Foto de Eduardo'
+            width='3626'
+            height='4662'
+            decoding='async'
+            fetchpriority='high'
+          />
+        </div>
+      </article>
     </div>
-  </div>
+  </Container>
 </section>
 <style>
   .clip-svg {
