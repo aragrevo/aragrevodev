@@ -1,0 +1,32 @@
+---
+import Container from '@components/Container.astro';
+import CardPorfolio from './CardPorfolio.astro';
+
+const projects = [
+  {
+    name: 'Pokedex App',
+    description: "Crud for pokemon's desing to practice",
+    stack: ['nextjs', 'nestjs', 'mongodb', 'tailwindcss'],
+    label: 'FullStack',
+    url: 'https://pokedex-next-khaki.vercel.app/',
+    image: '/images/pokedex.webp',
+  },
+  {
+    name: 'Welcome to Fifa World Cup',
+    description: "Web app to see Colombian's channel broadcasting Fifa world Cup Qatar 2022",
+    stack: ['nextjs', 'tailwindcss'],
+    label: 'frontend',
+    url: 'https://world-cup-nu.vercel.app/',
+    image: '/images/qatar.webp',
+  },
+];
+---
+
+<section id='portfolio' class='min-h-screen bg-neutral-900 py-10 sm:py-20'>
+  <Container>
+    <h2 class='text-5xl text-white block leading-none mb-10'>Projects</h2>
+    <div class='grid grid-cols-12 gap-5'>
+      {projects.map(project => <CardPorfolio {...project} />)}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,22 @@
+---
+import Badge from './Badge.astro';
+import Chip from './Chip.astro';
+import Image from './Image.astro';
+
+const {name, image, url, stack, label, description} = Astro.props;
+---
+
+<article class='col-span-4 border rounded-lg shadow-md border-gray-700 bg-gray-800 group transition relative'>
+  <Chip label={label} />
+  <a href={url} target='_blank' class='flex flex-col overflow-hidden rounded-lg h-full'>
+    <Image image={image} alt={name} />
+    <div class='flex flex-col justify-between p-4 leading-normal z-10 h-full'>
+      <h5 class='text-2xl text-white transition font-semibold tracking-wider'>{name}</h5>
+      <p class='font-normal text-gray-400 transition'>{description}</p>
+
+      <div class='flex flex-wrap gap-3 mt-3'>
+        {stack.map(l => <Badge text={l} />)}
+      </div>
+    </div>
+  </a>
+</article>

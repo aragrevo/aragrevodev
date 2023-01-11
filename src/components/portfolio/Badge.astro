@@ -1,0 +1,15 @@
+---
+const {text} = Astro.props;
+---
+
+<div class='capitalize font-medium px-2.5 py-1 shadow-sm rounded flex justify-center items-center gap-1 bg-blue-100'>
+  <img
+    class='aspect-square w-5'
+    src={`/icons/${text}.svg`}
+    width='20'
+    height='20'
+    decoding='async'
+    alt={`Logo of ${text}`}
+  />
+  <span class='text-sm'>{text}</span>
+</div>

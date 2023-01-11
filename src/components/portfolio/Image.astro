@@ -1,0 +1,13 @@
+---
+const {image, alt} = Astro.props;
+---
+
+<img
+  class='w-full rounded-t-lg aspect-video opacity-80 transition group-hover:scale-125 group-hover:opacity-90'
+  src={image}
+  alt={`Captura del sitio ${alt}`}
+  width='367'
+  height='240'
+  decoding='async'
+  fetchpriority='high'
+/>
