@@ -1,6 +1,7 @@
 ---
 import ButtonCTA from './ButtonCTA.astro';
 import Container from './Container.astro';
+import DarkMode from './icons/DarkMode.astro';
 
 const menu = [
   {
@@ -18,17 +19,20 @@ const menu = [
 ];
 ---
 
-<header>
+<header class='bg-white dark:bg-neutral-800'>
+  <button id='dark_mode' class='absolute w-10 h-10 top-0 right-2 dark-invert'>
+    <DarkMode />
+  </button>
   <Container>
     <nav class='flex justify-between items-center bg-transparent border-gray-200 rounded py-2.5'>
-      <ul class='sm:flex gap-8 hidden'>
-        <li><a href='/'>{'< AragrevoDev />'}</a></li>
+      <a href='/' class='dark:text-slate-300'>{'< AragrevoDev />'}</a>
+      <ul class='lg:flex gap-8 hidden'>
         {
           menu.map(({name, href}) => (
             <li>
               <a
                 href={href}
-                class={`block py-2 pl-3 transition pr-4 text-gray-700 rounded hover:bg-gray-100 sm:hover:bg-transparent sm:border-0 sm:hover:text-blue-700 sm:p-0`}>
+                class={`block py-2 pl-3 transition pr-4 text-gray-700 dark:text-gray-400 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 sm:p-0`}>
                 {name}
               </a>
             </li>
@@ -39,3 +43,9 @@ const menu = [
     </nav>
   </Container>
 </header>
+<script type='module'>
+  const btnDark = document.querySelector('#dark_mode');
+  btnDark.addEventListener('click', e => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
