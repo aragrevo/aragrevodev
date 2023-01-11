@@ -1,5 +1,6 @@
 ---
 import ButtonCTA from './ButtonCTA.astro';
+import Container from './Container.astro';
 
 const menu = [
   {
@@ -8,31 +9,33 @@ const menu = [
   },
   {
     name: 'Portfolio',
-    href: '/',
+    href: '/#portfolio',
   },
   {
     name: 'About Me',
-    href: '/',
+    href: '/#about-me',
   },
 ];
 ---
 
-<header class='container'>
-  <nav class='flex justify-between items-center bg-transparent border-gray-200 rounded py-2.5'>
-    <ul class='sm:flex gap-8 hidden'>
-      {
-        menu.map(({name, href}) => (
-          <li>
-            <a
-              href={href}
-              rel={Astro.url.pathname !== href && 'preload'}
-              class='block py-2 pl-3 transition pr-4 text-gray-700 rounded hover:bg-gray-100 sm:hover:bg-transparent sm:border-0 sm:hover:text-blue-700 sm:p-0 '>
-              {name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-    <ButtonCTA />
-  </nav>
+<header>
+  <Container>
+    <nav class='flex justify-between items-center bg-transparent border-gray-200 rounded py-2.5'>
+      <ul class='sm:flex gap-8 hidden'>
+        <li><a href='/'>{'< AragrevoDev />'}</a></li>
+        {
+          menu.map(({name, href}) => (
+            <li>
+              <a
+                href={href}
+                class={`block py-2 pl-3 transition pr-4 text-gray-700 rounded hover:bg-gray-100 sm:hover:bg-transparent sm:border-0 sm:hover:text-blue-700 sm:p-0`}>
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <ButtonCTA />
+    </nav>
+  </Container>
 </header>
