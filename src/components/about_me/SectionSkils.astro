@@ -1,0 +1,11 @@
+---
+import Skil from './Skil.astro';
+
+const {skils} = Astro.props;
+---
+
+<article class='mb-10 bg-custom-orange p-5 rounded-md shadow'>
+  <ul class='grid grid-cols-4 gap-4'>
+    {skils.map(skil => <Skil {...skil} />)}
+  </ul>
+</article>

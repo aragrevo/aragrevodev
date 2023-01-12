@@ -1,0 +1,10 @@
+---
+const {icon, description} = Astro.props;
+---
+
+<li class='flex flex-col items-center text-center gap-4 text-neutral-900'>
+  <div class='rounded-full p-1 bg-white bg-opacity-30'>
+    <img class='w-20 aspect-square' src={icon} alt='' decoding='async' loading='lazy' fetchpriority='low' />
+  </div>
+  <span class='font-medium text-lg'>{description}</span>
+</li>

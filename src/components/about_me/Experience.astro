@@ -1,0 +1,11 @@
+---
+import Job from './Job.astro';
+
+const {experience} = Astro.props;
+---
+
+<article class='grid grid-cols-12 gap-5'>
+  <ol class='relative col-span-12 border-l border-gray-200 dark:border-gray-700'>
+    {experience.map(job => <Job {...job} />)}
+  </ol>
+</article>
