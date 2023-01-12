@@ -1,0 +1,88 @@
+---
+import Container from '@components/Container.astro';
+import Github from '@components/icons/Github.astro';
+import Instagram from '@components/icons/Instagram.astro';
+import Linkedin from '@components/icons/Linkedin.astro';
+import Twitter from '@components/icons/Twitter.astro';
+
+const links = [
+  {
+    title: 'Linkedin',
+    href: 'https://www.linkedin.com/in/aragrevo/',
+  },
+  {
+    title: 'Mail',
+    href: 'mailto:eduardo.vergara.dev@outlook.com',
+  },
+  {
+    title: 'Github',
+    href: 'https://github.com/aragrevo',
+  },
+  {
+    title: 'Curriculum',
+    href: 'https://docs.google.com/document/d/1cURfkhrg3dhmSeKqbgEfdbP5rh16XIdp1qvIeQRbShs/edit?usp=sharing',
+  },
+];
+
+const NetworksEnum = {
+  linkedin: 'Linkedin',
+  github: 'Github',
+  instagram: 'Instagram',
+  twitter: 'Twitter',
+};
+
+const socialNetworks = [
+  {
+    name: NetworksEnum.linkedin,
+    href: 'https://www.linkedin.com/in/aragrevo/',
+  },
+  {
+    name: NetworksEnum.github,
+    href: 'https://github.com/aragrevo',
+  },
+  {
+    name: NetworksEnum.instagram,
+    href: '',
+  },
+  {
+    name: NetworksEnum.twitter,
+    href: '',
+  },
+];
+---
+
+<section id='contact-me' class='bg-neutral-900 py-10 lg:py-20'>
+  <Container>
+    <h2 class='text-5xl text-white block leading-none mb-10'>Contact Me</h2>
+
+    <footer class='bg-transparent'>
+      <ul class='grid grid-cols-2 gap-8 md:grid-cols-4 text-gray-500 dark:text-gray-400'>
+        {
+          links.map(({title, href}) => (
+            <li class='mb-4'>
+              <a href={href} target='_blank' class='hover:underline'>
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class='pt-6 flex items-center justify-between'>
+        <span class='text-sm text-gray-500 dark:text-gray-300 sm:text-center'>2023</span>
+        <div class='flex space-x-6 sm:justify-center md:mt-0'>
+          {
+            socialNetworks.map(({name, href}) => (
+              <a href={href} target='_blank' class='text-gray-400 hover:text-blue-700 dark:hover:text-white'>
+                {name === NetworksEnum.linkedin && <Linkedin />}
+                {name === NetworksEnum.instagram && <Instagram />}
+                {name === NetworksEnum.twitter && <Twitter />}
+                {name === NetworksEnum.github && <Github />}
+                <span class='sr-only'>{name} page</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </footer>
+  </Container>
+</section>
