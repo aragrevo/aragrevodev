@@ -6,17 +6,11 @@ export interface Props {
   title: string;
 }
 
-// const data = {
-//   title: 'Aragrevo Dev',
-//   text: 'Hello!, This is my profile, thanks for share',
-//   url: 'htttps://aragrevp.dev'
-// }
-
-// if (navigator.canShare && navigator.canShare(data)) {
-//   navigator.share(data)
-// }
-
 const {title} = Astro.props;
+const description =
+  'Bienvenido a mi portafolio en línea. Explora mi portafolio en línea y descubre mi experiencia en desarrollo frontend, incluyendo proyectos con HTML, CSS y JavaScript. Si está interesado en contratar mis servicios o simplemente desea saber más sobre mi experiencia, no dude en ponerse en contacto conmigo.';
+const url = 'https://website-aragrevo.vercel.app/';
+const image = 'https://website-aragrevo.vercel.app/images/foto.webp';
 ---
 
 <!DOCTYPE html>
@@ -25,10 +19,27 @@ const {title} = Astro.props;
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <title>{title}</title>
-    <meta name='description' content='Eduardo Vergara Porfolio ' />
     <link href={Astro.url.href} rel='canonical' />
     <meta name='generator' content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name='title' content={title} />
+    <meta name='description' content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={url} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={image} />
+
+    <!-- Twitter -->
+    <meta property='twitter:card' content='summary_large_image' />
+    <meta property='twitter:url' content={url} />
+    <meta property='twitter:title' content={title} />
+    <meta property='twitter:description' content={description} />
+    <meta property='twitter:image' content={image} />
   </head>
   <body class='min-h-screen overflow-x-hidden'>
     <Header />
@@ -45,4 +56,3 @@ const {title} = Astro.props;
     filter: invert(100%);
   }
 </style>
-<!-- TODO: Shared -->
