@@ -15,10 +15,12 @@ const socialNetworks = [
   {
     name: NetworksEnum.linkedin,
     href: 'https://www.linkedin.com/in/aragrevo/',
+    color: '#2C3456',
   },
   {
     name: NetworksEnum.github,
     href: 'https://github.com/aragrevo',
+    color: '#CC296C',
   },
 ];
 ---
@@ -26,7 +28,12 @@ const socialNetworks = [
 <div class='flex space-x-6 sm:justify-center md:mt-0'>
   {
     socialNetworks.map(({name, href}) => (
-      <a href={href} target='_blank' class='text-slate-400 hover:text-blue-700 dark:hover:text-white'>
+      <a
+        href={href}
+        target='_blank'
+        class={`text-slate-400 transition-all ${
+          NetworksEnum.linkedin === name ? 'hover:text-[#2C3456]' : 'hover:text-[#CC296C]'
+        }`}>
         {name === NetworksEnum.linkedin && <Linkedin />}
         {name === NetworksEnum.github && <Github />}
         <span class='sr-only'>{name} page</span>

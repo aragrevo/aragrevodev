@@ -3,6 +3,7 @@ import Blob from './Blob.astro';
 import Box from './Box.astro';
 import ButtonCTA from '@components/ButtonCTA.astro';
 import Container from './Container.astro';
+import SocialButtons from './SocialButtons.astro';
 const technologies = [
   {name: 'angular', bg: 'bg-orange-400'},
   {name: 'react', bg: 'bg-yellow-700', color: 'text-white'},
@@ -24,8 +25,9 @@ const timeExperience = new Date().getFullYear() - 2019;
           <p class='text-lg text-gray-700 dark:text-gray-400 leading-tight'>
             I code beautifully simple things, and I love what I do.
           </p>
-          <div>
+          <div class='flex justify-between items-center'>
             <ButtonCTA className='text-white bg-custom-orange hover:bg-orange-600' />
+            <SocialButtons />
           </div>
         </div>
         <div class='flex flex-wrap gap-3 mt-10'>
