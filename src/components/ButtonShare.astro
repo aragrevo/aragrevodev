@@ -1,0 +1,24 @@
+---
+import Share from './icons/Share.astro';
+---
+
+<button id='share' class='text-slate-400 hover:text-blue-700 dark:hover:text-white'>
+  <Share />
+  <span class='sr-only'>Share button</span>
+</button>
+
+<script type='module'>
+  const btnShare = document.querySelector('#share');
+  btnShare.addEventListener('click', e => {
+    const data = {
+      title: 'Aragrevo Dev',
+      text: 'Hello!, This is my portfolio, thanks for share',
+      url: 'https://website-aragrevo.vercel.app/',
+    };
+    if (navigator && navigator.canShare && navigator.canShare(data)) {
+      navigator.share(data);
+    } else {
+      console.warn('Cann´t share ' + navigator);
+    }
+  });
+</script>

@@ -1,9 +1,7 @@
 ---
 import Container from '@components/Container.astro';
-import Github from '@components/icons/Github.astro';
-import Instagram from '@components/icons/Instagram.astro';
-import Linkedin from '@components/icons/Linkedin.astro';
-import Twitter from '@components/icons/Twitter.astro';
+
+import SocialButtons from '@components/SocialButtons.astro';
 
 const links = [
   {
@@ -21,32 +19,6 @@ const links = [
   {
     title: 'Curriculum',
     href: 'https://docs.google.com/document/d/1cURfkhrg3dhmSeKqbgEfdbP5rh16XIdp1qvIeQRbShs/edit?usp=sharing',
-  },
-];
-
-const NetworksEnum = {
-  linkedin: 'Linkedin',
-  github: 'Github',
-  instagram: 'Instagram',
-  twitter: 'Twitter',
-};
-
-const socialNetworks = [
-  {
-    name: NetworksEnum.linkedin,
-    href: 'https://www.linkedin.com/in/aragrevo/',
-  },
-  {
-    name: NetworksEnum.github,
-    href: 'https://github.com/aragrevo',
-  },
-  {
-    name: NetworksEnum.instagram,
-    href: '#',
-  },
-  {
-    name: NetworksEnum.twitter,
-    href: '#',
   },
 ];
 ---
@@ -68,20 +40,10 @@ const socialNetworks = [
         }
       </ul>
       <div class='pt-6 flex items-center justify-between'>
-        <span class='text-sm text-slate-400 dark:text-slate-400 sm:text-center'>2023</span>
-        <div class='flex space-x-6 sm:justify-center md:mt-0'>
-          {
-            socialNetworks.map(({name, href}) => (
-              <a href={href} target='_blank' class='text-slate-400 hover:text-blue-700 dark:hover:text-white'>
-                {name === NetworksEnum.linkedin && <Linkedin />}
-                {name === NetworksEnum.instagram && <Instagram />}
-                {name === NetworksEnum.twitter && <Twitter />}
-                {name === NetworksEnum.github && <Github />}
-                <span class='sr-only'>{name} page</span>
-              </a>
-            ))
-          }
-        </div>
+        <span class='text-sm text-slate-400 dark:text-slate-400 sm:text-center'
+          >2023. Built with <a href='https://astro.build'>{Astro.generator}</a></span
+        >
+        <SocialButtons />
       </div>
     </footer>
   </Container>
