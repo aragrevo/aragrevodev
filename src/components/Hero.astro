@@ -48,8 +48,10 @@ const timeExperience = new Date().getFullYear() - 2019;
           }
         </div>
       </article>
-      <article class='col-span-3 lg:col-span-2 relative order-first lg:order-last'>
-        <div class='absolute blob left-0 top-0 right-0 lg:left-28 lg:right-28 h-full'>
+      <article class='col-span-3 lg:col-span-2 relative order-first lg:order-last card group'>
+        <div
+          class='absolute blob left-0 top-0 right-0 lg:left-28 lg:right-28 h-full transition-all duration-500 group-hover:drop-shadow-[2px_35px_32px_rgba(0,0,0,0.75)]'
+        >
           <Blob />
         </div>
         <div class='flex justify-center items-center'>
@@ -62,7 +64,7 @@ const timeExperience = new Date().getFullYear() - 2019;
             </Box>
           </div>
           <img
-            class='aspect-[7/9] max-h-96 w-auto clip-svg'
+            class='aspect-[7/9] max-h-96 w-auto clip-svg transition-all duration-500'
             src='/images/foto.webp'
             alt='Foto de Eduardo'
             width='299'
@@ -78,5 +80,11 @@ const timeExperience = new Date().getFullYear() - 2019;
 <style>
   .clip-svg {
     clip-path: url('#blob3');
+  }
+  .card:hover .blob {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  }
+  .card:hover .clip-svg {
+    transform: translate3d(0%, -10%, 100px);
   }
 </style>
