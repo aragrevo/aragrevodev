@@ -3,10 +3,11 @@ const {label} = Astro.props;
 const icons = {
   FrontEnd: 'html',
   FullStack: 'api',
+  Mobile: 'android',
 };
 ---
 
-<div class='absolute -right-2 -top-5 z-10 aspect-square grid content-center justify-center'>
+<div class='absolute -right-2 -top-3 z-10 aspect-square grid content-center justify-center'>
   <img
     class='aspect-square w-10'
     src={`/icons/${icons[label]}.svg`}
